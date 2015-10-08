@@ -1,0 +1,74 @@
+@font-face {
+    font-family:font-light;
+    src:url('../fonts/Ubuntu-Light.ttf') format("truetype");
+}
+@font-face {
+    font-family:font-bold;
+    src:url('../fonts/Ubuntu-Medium.ttf') format("truetype");
+}
+@font-face {
+    font-family:font-thai;
+    src:url('../fonts/THSarabunNew.ttf') format("truetype");
+}
+body{
+  font-family: font-light;
+  background-color: #fafafa;
+  min-width: 320px;
+}
+p{
+	font-size:1.1vw;
+}
+nav{
+	background-color:#3E2723;
+	padding:0.8vw;
+}
+
+.class-light-tx{
+color:#EEEEEE;
+}
+.a-light-tx{
+color:#EEEEEE;
+}
+.a-light-tx:hover{
+color: #FF00FF;
+}
+main {
+padding:1vw;
+}
+
+header{
+padding:1vw;
+// box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+
+}
+.span-min-640{
+min-width: 760px;
+}
+.div-border-line{
+ border: 0.1vw solid #9E9E9E;
+}
+.display-inline{
+	display: inline;
+}
+.font-light{
+ font-family:font-bold;
+}
+.font-bold{
+ font-family:font-bold;
+}
+.font-thai{
+ font-family:font-thai;
+}
+.font-size-medium{
+font-size:2vw;
+}
+.div-content{
+position:relative;
+	width:100%;
+}
+.div-grid{
+position:relative;
+margin:0 auto;
+ max-width:200px;
+ padding:0.5vw;
+}
