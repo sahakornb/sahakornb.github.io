@@ -10,14 +10,6 @@
 		<meta name="author" content="Codrops" />
 		<link rel="stylesheet" href="css/sahakornb.css" />
 		<script src="js/jquery-1.10.2.min.js"></script>
-			<script>
-	$(document).ready( function() {
-	
-        location.href="article.html"
-		
-});
-
-</script>
 		</head>
 <body>
 	<header>
@@ -32,7 +24,27 @@
 	</nav>
 	</header>
 	<main>
+			<div id = "top1" class = "div-main div-shadow"></div>	
+			<div id = "top2" class = "div-main div-shadow"></div>
+			<div id = "top3" class = "div-main div-shadow"></div>				
+	<script>
+	$(document).ready( function() {
 	
+        $("#top1").load("arcticles/3.html #title");
+		$("#top2").load("arcticles/2.html #title");
+		$("#top3").load("arcticles/1.html #title");
+		
+});
+$("#top1").click(function () {
+    location.href="arcticles/1.html"
+});
+$("#top2").click(function () {
+   location.href="arcticles/2.html"
+});
+$("#top3").click(function () {
+   location.href="arcticles/3.html"
+});
+</script>
 		
 	</main>
 	
