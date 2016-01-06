@@ -1,33 +1,19 @@
+@font-face {
+    font-family:myFont;
+    src:url('../font/THSarabun.ttf') format("truetype");
+}
 body{
-  font-family: myFont;
-  background-color: #37474f;
-  padding:0.5vw;
- 
-  
+	background-color:#BF360C;
+	color:#EEEEEE;
+	
 }
-
-.div-main{
-	padding:1vw;
-	width:80%;
-	margin-top:0.3vw;
-	background-color:#546E7A;
-	border: 1px solid;
-    border-radius: 20px;
+.white-big{
+	color:#FFFFFF;
 }
-.div-article{
-	padding:1%;
-	width:90%;
-	margin:0 auto;
+.font-thai{
+	font-family: myFont;
+	line-height: 95%;
 }
-.link-a {
-	padding:0.5vw;display:inline;color:#FF9800;
-}
-.div-shadow{
- box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
- }
-.txt-green{
-	color:#80cbc4
-}
-.txt-base-color{
-	color:#c8e6c9;
+.color-text{
+	color:#BF360C;
 }
