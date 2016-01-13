@@ -3,7 +3,7 @@
     src:url('../font/THSarabun.ttf') format("truetype");
 }
 body{
-	background-color:#BF360C;
+	background-color:#90A4AE;
 	color:#FFFFFF;
 	
 }
@@ -16,4 +16,10 @@ body{
 }
 .color-text{
 	color:#BF360C;
+}
+.padding-div{
+	padding:1vw;
+}
+.color-theme{
+	background-color:#607D8B;
 }

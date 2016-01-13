@@ -9,19 +9,33 @@
 		<meta name="keywords" content="" />
 		<meta name="author" content="Codrops" />
 		<link rel="stylesheet" href="css/sahakornb.css" />
-		<script src="js/jquery-1.10.2.min.js"></script>
-	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.red-deep_orange.min.css" />
+		<!--<script src="js/jquery-1.12.0.min.js"></script>-->
+	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue_grey-indigo.min.css" />
 	 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
 	  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	  <script>
-	$(window).scroll(function() {
-    if ($(this).scrollTop() > 0) {
-        // apply effects and animations
-    }
-});
-	  </script>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<script>
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	  
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+	});
+	</script>
 		</head>
-<body>
+<body onload="Init()">
    <!-- Always shows a header, even in smaller screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
@@ -34,8 +48,9 @@
       <nav class="mdl-navigation mdl-layout--large-screen-only" >
         <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF;" href="#main">My work</a>
         <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF" href="#contact">Contact me</a>
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF" href="">Knowledge</a>
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF" href="#main">Knowledge</a>
         <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF" href="#about">About me</a>
+
       </nav>
     </div>
   </header>
@@ -53,9 +68,8 @@
 	
 	<!---- Contact Grid ------>
 	<div class="mdl-grid" id="main">
-		<div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet mdl-cell--0-col-phone"></div>
 		<!---- Contact website. ------>
-		<div class="mdl-cell mdl-cell--10-col mdl-cell--10-col-tablet mdl-cell--12-col-phone" style="background-color:#DD2C00" align='center'>
+		<div class="mdl-cell mdl-cell--12-col mdl-cell--10-col-tablet mdl-cell--12-col-phone padding-div color-theme"  align='center'>
 					<!---- sub Contact website. ------>
 				<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
@@ -93,9 +107,8 @@
 	
 	<!---- Contact website. ------>
 		<div class="mdl-grid" >
-		<div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet mdl-cell--0-col-phone"></div>
 		<!---- Contact website. ------>
-		<div class="mdl-cell mdl-cell--10-col mdl-cell--10-col-tablet mdl-cell--12-col-phone" style="background-color:#DD2C00" align='center'>
+		<div class="mdl-cell mdl-cell--12-col mdl-cell--10-col-tablet mdl-cell--12-col-phone padding-div color-theme" align='center'>
 					<!---- sub Contact website. ------>
 				<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
@@ -144,9 +157,8 @@
 	<!----end------>
 	<!---- Contact website. ------>
 		<div class="mdl-grid" >
-		<div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet mdl-cell--0-col-phone"></div>
 		<!---- Contact website. ------>
-		<div class="mdl-cell mdl-cell--10-col mdl-cell--10-col-tablet mdl-cell--12-col-phone" style="background-color:#DD2C00" align='center'>
+		<div class="mdl-cell mdl-cell--12-col mdl-cell--10-col-tablet mdl-cell--12-col-phone  padding-div color-theme"  align='center'>
 					<!---- sub Contact website. ------>
 				<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
@@ -155,7 +167,7 @@
 				</div>
 				<div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
 					<div align="left">
-						<h2 class="font-thai">พัฒนาซอฟท์แวร์ /แอพพลิเคชั่น บนอุปกรณ์ฝังตัว และ  Mobile application</h2>
+						<h2 class="font-thai">พัฒนาซอฟต์แวร์ /แอพพลิเคชั่น บนอุปกรณ์ฝังตัว และ  Mobile application</h2>
 						<h4 class="font-thai"> แอพพลิเคชั่นที่ทำงานบนอุปกรณ์ที่สามารถใช้ระบบปฎิบัติการได้ (Linux) และแอพพลิเคชั่นที่ทำงานได้บนคอมพิวเตอร์  PC หรือบนสมาร์ทโฟนในรูปแบบของ Mobile Application 
 						ทำให้ผู้ใช้งานสามารถเลือกทำงานได้ในแพลตฟอร์มที่ต้องการ 
 						</h4>
@@ -189,9 +201,9 @@
 	
 	<!---- Contact Grid ------>
 	<div class="mdl-grid" id="contact">
-		<div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet mdl-cell--0-col-phone"></div>
+	
 		<!---- Contact website. ------>
-		<div class="mdl-cell mdl-cell--10-col mdl-cell--10-col-tablet mdl-cell--12-col-phone" style="background-color:#DD2C00" align='center'>
+		<div class="mdl-cell mdl-cell--12-col mdl-cell--10-col-tablet mdl-cell--12-col-phone  padding-div color-theme" align='center'>
 					<!---- sub Contact website. ------>
 				<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-tablet mdl-cell--10-col-phone" style="background-color:#FFFFFF">
@@ -238,7 +250,7 @@
 				<h3 class ="font-thai color-text">Email : sahakorn.new@gmail.com</h3>
 					
 				</div>
-				<div class="mdl-cell mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--10-col-phone" style="background-color:#DD2C00" align='center'>
+				<div class="mdl-cell mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--10-col-phone color-theme"  align='center'>
 					
 					<div align="left">
 				<h3 class="font-thai">ติดต่อสอบถามงาน
@@ -264,9 +276,9 @@
 	
 	<!---- About Grid ------>
 	<div class="mdl-grid" id="about">
-		<div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet mdl-cell--0-col-phone"></div>
+	
 		<!---- About website. ------>
-		<div class="mdl-cell mdl-cell--10-col mdl-cell--10-col-tablet mdl-cell--12-col-phone" style="background-color:#DD2C00" align='center'>
+		<div class="mdl-cell mdl-cell--12-col mdl-cell--10-col-tablet mdl-cell--12-col-phone  padding-div color-theme" align='center'>
 					<!---- sub About website. ------>
 				<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-tablet mdl-cell--10-col-phone">
@@ -275,7 +287,7 @@
 					<h3 class ="font-thai">สหกรณ์ บัวงาม</h3>
 					<h4 class="font-thai">ตำแหน่ง วิศวกรคอมพิวเตอร์ </h4>
 				</div>
-				<div class="mdl-cell mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--10-col-phone" style="background-color:#DD2C00" align='center'>
+				<div class="mdl-cell mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--10-col-phone color-theme"  align='center'>
 					
 					<div align="left">
 				<h3 class="font-thai">ความถนัดและประสบการณ์การทำงาน
