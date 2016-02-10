@@ -28,10 +28,10 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only" >
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF;" href="#main">My work</a>
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF" href="#contact">Contact me</a>
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF" href="public.html">Public</a>
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF" href="#about">About me</a>
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF;" href="index.html#main">My work</a>
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF" href="index.html#contact">Contact me</a>
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF" href="#">Public</a>
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF" href="index.html#about">About me</a>
 
       </nav>
     </div>
@@ -39,35 +39,69 @@
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title" style="background-color:#BF360C">Menu</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="#main">My work</a>
-      <a class="mdl-navigation__link" href="#main">Contact me</a>
-      <a class="mdl-navigation__link" href="public.html">Public</a>
-      <a class="mdl-navigation__link" href="#about">About me</a>
+      <a class="mdl-navigation__link" href="index.html#main">My work</a>
+      <a class="mdl-navigation__link" href="index.html#main">Contact me</a>
+      <a class="mdl-navigation__link" href="#">Public</a>
+      <a class="mdl-navigation__link" href="index.html#about">About me</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
     <div class="page-content">
 	
-	<!---- Contact Grid ------>
+	<!---- Row 1  Grid ------>
 	<div class="mdl-grid" id="main">
 		<!---- Contact website. ------>
-		<div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet mdl-cell--1-col-phone"></div>
-		<div class="mdl-cell mdl-cell--10-col mdl-cell--10-col-tablet mdl-cell--12-col-phone padding-div color-theme"  align='center'>
-		<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" width="90%" style="color:#263238">
-  <thead>
-    <tr>
-      <th class="mdl-data-table__cell--non-numeric">Name</th>
-      <th>Age</th>
-      <th>ID Number</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-	</div>
+		<div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone padding-div chark-color div-shadow"  align='center'>
+			<div class="mdl-grid" id="main">
+				<a href ="public/optimizing_arduino.html"><div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone padding-div color-write"  align='center'>
+					<img src="images/public/arduino.png" width="100%"></img>
+					<h3 class="tx-color-black font-thai">เพิ่มประสิทธิภาพการจัดการหน่วยความจำของ Arduino</h3>
+				</div></a>
+			</div>
+		</div>
+		<div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone padding-div chark-color div-shadow"  align='center'>
+			<div class="mdl-grid" id="main">
+					<a href ="document/introduction_to_qt.pdf"><div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone padding-div color-write"  align='center'>
+					<img src="images/public/qt.png" width="100%"></img>
+					<h3 class="tx-color-black font-thai">แนะนำการเริ่มต้นพัฒนาซอฟท์แวร์บน Qt framework</h3>
+				</div></a>
+			</div>
+		</div>
+		<div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone padding-div chark-color div-shadow"  align='center'>
+				<a href ="document/qt_android.pdf"><div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone padding-div color-write"  align='center'>
+					<img src="images/public/qt_android.png" width="100%"></img>
+					<h3 class="tx-color-black font-thai">แนะนำการเริ่มต้นพัฒนา แอพพลิเคชั่นบน Android ด้วย Qt</h3>
+				</div></a>
+		</div>
+		<div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone padding-div chark-color div-shadow"  align='center'>
+			<a href ="document/qt_android.pdf"><div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone padding-div color-write"  align='center'>
+					<img src="images/public/qt_android.png" width="100%"></img>
+					<h3 class="tx-color-black font-thai">แนะนำการเริ่มต้นพัฒนา แอพพลิเคชั่นบน Android ด้วย Qt</h3>
+				</div></a>
+		</div>
 	</div>
 	
+	
+		<!---- Row 2 Grid ------>
+	<div class="mdl-grid" id="main">
+		<!---- Contact website. ------>
+		<div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone padding-div chark-color div-shadow"  align='center'>
+		
+		</div>
+	
+	
+		<div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone padding-div chark-color div-shadow"  align='center'>
+				
+		</div>
+		<div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone padding-div chark-color div-shadow"  align='center'>
+			
+		</div>
+			<div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone padding-div chark-color div-shadow"  align='center'>
+			
+		</div>
 	</div>
+	</div>
+	<footer align ="center"><h4 class="font-thai">	Copyright &#169; 2016 sahakornb.github.io</h4></footer>
   </main>
 </div>
   </body>

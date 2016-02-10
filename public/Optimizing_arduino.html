@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+		<title>SAHAKORNB</title>
+		<meta name="description" content="sahakornb.io" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Codrops" />
+		<link rel="stylesheet" href="../css/sahakornb.css" />
+		<!--<script src="js/jquery-1.12.0.min.js"></script>-->
+	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue_grey-indigo.min.css" />
+	
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+	 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		</head>
+<body>
+   <!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">SAHAKORNB</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only" >
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF;" href="../index.html#main">My work</a>
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF" href="../index.html#contact">Contact me</a>
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF" href="../public.html">Public</a>
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#FFFFFF" href="../index.html#about">About me</a>
+
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title" style="background-color:#BF360C">Menu</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="../index.html#main">My work</a>
+      <a class="mdl-navigation__link" href="../index.html#main">Contact me</a>
+      <a class="mdl-navigation__link" href="../public.html">Public</a>
+      <a class="mdl-navigation__link" href="../index.html#about">About me</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+	
+	<!---- Contact Grid ------>
+	<div class="mdl-grid" id="main">
+		<!---- Contact website. ------>
+		<div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet mdl-cell--1-col-phone"  align='center'></div>
+		<div class="mdl-cell mdl-cell--8-col mdl-cell--10-col-tablet mdl-cell--12-col-phone padding-div chark-color div-shadow">
+		<!--- Main content --->
+		<h1 class="font-thai"><u>เพิ่มประสิทธิภาพการจัดการหน่วยความจำของ Arduino</h1></u>
+			<h3 align = "left" class ="main-font"> ทุกวันนี้ในการพัฒนาโปรแกรมบนไมโครคอนโทรลเลอร์นั้น คงจะไม่มีใครรู้จัก Arduino ซึ่งเป็นบอร์ดไมโครขนาดเล็กราคาประหยัด (โดยทั่วไป) ซึ่งเหมาะแก่การพัฒนาเพื่อ พิสูจน์สมมติฐาน
+			หรือการเริ่มต้นจะเรียนรู้ ซึ่งแม้ไม่เคยมีความรู้ทางด้าน การเขียนโปรแกรมก็จะสามารถเรียนรู้และพัฒนาได้  จึงเป็นที่นิยมสำหรับกลุ่มของ Startup อีกด้วย</h3>
+			<h2 class="font-thai">Memory in the arduino!</h2>
+			<h4 align ="left" class ="main-font">สำหรับหน่วยความจำของ Arduino จะแบ่งออกเป็น 3 ส่วนคือ
+				<ul class ="main-font">
+					<li> Flash Memory (ส่วนของ program) </li>
+					<li> SRAM (static random access memory) </li>
+					<li> EEPROM (can use to store long-term information)</li>
+				</ul>
+			</h4>
+			<table width ="100%" border=" align="center">
+				<tr align="center">
+					<td></td>
+					<td>ATMega168</td>
+					<td>ATMega328P</td>
+					<td>ATMega1280</td>
+					<td>ATmega2560</td>
+				</tr>
+					<tr align="center">
+					<td>Flash<br>(1 Kbyte used for bootloader)</td>
+					<td>16 KBytes</td>
+					<td>32 KBytes</td>
+					<td>128 KBytes</td>
+					<td>256 KBytes</td>
+				</tr>
+				<tr align="center">
+					<td>SPAM</td>
+					<td>1024 KBytes</td>
+					<td>2048 KBytes</td>
+					<td>8 KBytes</td>
+					<td>8 KBytes</td>
+				</tr>
+					<tr align="center">
+					<td>EEPROM</td>
+					<td>512 KBytes</td>
+					<td>1024 KBytes</td>
+					<td>4 KBytes</td>
+					<td>4 KBytes</td>
+				</tr>
+			</table>
+			<a href="http://playground.arduino.cc/Learning/Memory">Memory : More information.</a>
+			
+			<h2 class="font-thai"><u>กำจัดตัวแปรที่ไม่ใช้งาน หรือกำหนดขนาดข้อมูลให้เหมาะสมกับการใช้งาน</h2></u>
+				<p class ="main-font">จะเห็นว่าส่วนของหน่วยความจำนั้นมีไม่มากนัก การเขียนโปรแกรมที่อาจจะเพื่อเพิ่มในอนาคต หรือไม่แน่ใจ ก็ใส่ไว้ให้เยอะไว้ก่อน อย่างเช่นการกำหนดขนาดของ Array จะทำให้เสียประสิทธิภาพการทำงานโดยเปล่าประโยชน์ 
+				หรือจะเป็นการใช้งานคำสั่ง print อาจทำในขั้นตอน Debug โปรแกรม ซึ่งเมื่อเราพัฒนาจนเสร็จแล้วก็ควร Comment ไว้ เพราะว่า ตัวแปรภาษา compiler จะประมวลผลหรือ จะดำเนินการทุกตัวแปร และทุกบรรทัด ที่ไม่มีการ Comment</p>
+			<h2 class="font-thai">
+			<u>เก็บตัวแปรที่ไม่มีการเปลี่ยนแปลงไว้ใน  PROGMEM</h2></u>
+			<p class ="main-font">การเก็บข้อมูลไว้ใน flash memory (program memory) ซึ่ง PROGMEM เป็นการแสดงถึง datatypes ใน pgmspace.h เป็นการบอกให้ compiler เก็บข้อมูลไว้ใน flash memory</p>
+			<h4 class ="font-thai tx-color-org">Syntax</h4>
+			<p class="main-font ">เริ่มต้นด้วยการเรียกใช้งาน Lib : โดยใช้คำสั่ง   </p>
+			<p class = "main-font tx-color-org">#include &lt;avr/pgmspace.h&gt; </p>
+			<p class="main-font ">ประกาศตัวแปรสำหรับเก็บข้อมูล ด้วยคำสั่ง</p>
+			<p class = "main-font tx-color-org"> const dataType variableName[] PROGMEM = {data0, data1, data3...}; </p>
+			<p class = "main-font"> ซึ่งสามารถประกาศนั้นจะอยู่ในฟอร์มนี้ครือ </p>
+			<p class = "main-font tx-color-org">
+			const dataType variableName[] PROGMEM = {};   // use this form <br>
+			const PROGMEM  dataType  variableName[] = {}; // or this form</p>
+			<p class = "main-font">การเรียกใช้งานข้อมูล</p>
+			<p class = "main-font tx-color-org">pgm_read_type(address) <br>
+			<p class = "main-font">ตัวอย่างเช่น </p>
+			<p class = "main-font tx-color-org">const PROGMEM  uint16_t charSet[]  = { 65000, 32796, 16843, 10, 11234};</p>
+			<p class = "main-font tx-color-org">for (k = 0; k < 5; k++) {</p>
+			<p class = "main-font tx-color-org">intValue =  pgm_read_word_near(charSet + k);<br>
+				Serial.println(displayInt);<br>
+  }</p>
+			<a href="http://www.nongnu.org/avr-libc/user-manual/group__avr__pgmspace.html"> pgmspace.h เพิ่มเติม</a>
+			<a href="https://www.arduino.cc/en/Reference/PROGMEM">PROGMEM เพิ่มเติม</a>
+			<h2 class="font-thai"><u>ใช้คำสั่ง F() กับการแสดง String ยาวๆ (Serial.print)</h2></u>
+			<p class ="main-font">คำสั่ง F() จะเป็นการบอก compiler ว่า ให้เก็บข้อมูล String ที่ป้อนเข้าไปไว้ ใน PROGMEM </p>
+			<p class ="main-font">เช่นหากเราต้องการใช้คำสั่ง</p>
+			<p class = "main-font tx-color-org">Serial.println("For all the times that you rain on my parade And all the clubs you get in using my name You think you broke my heart, oh girl for goodness sake You think I’m crying on my own, well I ain’t");</p>
+			<p class ="main-font">ให้เพิ่มคำสั่ง F() ดังนี้</p>
+			<p class = "main-font tx-color-org">Serial.println(F("For all the times that you rain on my parade And all the clubs you get in using my name You think you broke my heart, oh girl for goodness sake You think I’m crying on my own, well I ain’t"));</p>
+			<h2 class="font-thai"><u>ใช้คำสั่ง reserve() กับ string</h2></u>
+			<p class ="main-font">คำสั่ง reverse() จะช่วยในเรื่องการจอง Memory ให้กับโปรแกรม หากในภาษาซี คือคำสั่ง realloc() ซึ่ง ทาง arduino ได้มีการจัดการให้เราแล้ว ดังนั้น เราสามารถจัดการกับขนาดของตัวแปรของเราได้ เช่น</p>
+			<p class = "main-font tx-color-org">		
+				String myString;<br>
+				myString.reserve(26);<br>
+				  myString = "i=";<br>
+				  myString += "1234";<br>
+				  myString += ", is that ok?";
+			</p>
+			<a href="https://www.arduino.cc/en/Reference/StringReserve"> StringReserve เพิ่มเติม</a>
+			<a href="https://learn.adafruit.com/memories-of-an-arduino/optimizing-sram">Good article for optimizing memory</a>
+		</div>
+
+	</div>
+	
+	</div>
+	<footer align ="center"><h4 class="font-thai">	Copyright &#169; 2016 sahakornb.github.io</h4></footer>
+  </main>
+</div>
+  </body>
+</html>

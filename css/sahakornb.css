@@ -14,6 +14,11 @@ body{
 	font-family: myFont;
 	line-height: 95%;
 }
+.main-font{
+	font-family: myFont;
+	line-height: 95%;
+	font-size:1.2vw;
+}
 .color-text{
 	color:#BF360C;
 }
@@ -22,4 +27,25 @@ body{
 }
 .color-theme{
 	background-color:#607D8B;
+}
+.color-write{
+	background-color:#FFFFFF;
+}
+.tx-color-org{
+	color:#FF9800
+}
+.tx-color-black{
+	color:#212121;
+}
+table, th, td {
+    border: 1px solid #EEEEEE;
+}
+table {
+    border-collapse: collapse;
+}
+.chark-color{
+	background-color:#2F4F4F
+}
+.div-shadow{
+	box-shadow: 10px 10px 5px #888888;
 }
