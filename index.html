@@ -17,6 +17,101 @@
 
 	 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
 	 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>
+
+
+function SendMailItem(p_recipient, p_subject, p_body, p_file, p_attachmentname, progressSymbol) {
+
+    // Email address of the recipient 
+    g_recipient = p_recipient;
+
+   // Subject line of an email
+    g_subject = p_subject;
+
+   // Body description of an email
+    g_body = p_body;
+
+    // attachments of an email
+    g_attachmentname = p_attachmentname;
+
+    SendC360Email(g_recipient, g_subject, g_body, g_attachmentname);
+}
+
+function SendC360Email(g_recipient, g_subject, g_body, g_attachmentname) {
+    var flag = confirm('Would you like continue with email');
+    if (flag == true) {
+
+        try {
+            //p_file = g_attachmentname;
+            //var FileExtension = p_file.substring(p_file.lastIndexOf(".") + 1);
+           // FileExtension = FileExtension.toUpperCase();
+            //alert(FileExtension);
+            SendMailHere = true;
+
+            //if (FileExtension != "PDF") {
+
+            //    if (confirm('Convert to PDF?')) {
+            //        SendMailHere = false;                    
+            //    }
+
+            //}
+            if (SendMailHere) {
+                var objO = new ActiveXObject('Outlook.Application');
+
+                var objNS = objO.GetNameSpace('MAPI');
+
+                var mItm = objO.CreateItem(0);
+
+                if (g_recipient.length > 0) {
+                    mItm.To = g_recipient;
+                }
+
+                mItm.Subject = g_subject;
+
+                // if there is only one attachment                 
+                // p_file = g_attachmentname;
+                // mAts.add(p_file, 1, g_body.length + 1, g_attachmentname);
+
+                // If there are multiple attachment files
+                //Split the  files names
+                var arrFileName = g_attachmentname.split(";");
+                 // alert(g_attachmentname);
+                //alert(arrFileName.length);
+                var mAts = mItm.Attachments;
+
+                for (var i = 0; i < arrFileName.length; i++)
+                {
+                    //alert(arrFileName[i]);
+                    p_file = arrFileName[i];
+                    if (p_file.length > 0)
+                    {                     
+                        //mAts.add(p_file, 1, g_body.length + 1, g_attachmentname);
+                        mAts.add(p_file, i, g_body.length + 1, p_file);
+
+                    }
+                }
+
+                mItm.Display();
+
+                mItm.Body = g_body;
+
+                mItm.GetInspector.WindowState = 2;
+
+            }
+            //hideProgressDiv();
+
+        } catch (e) {
+            //debugger;
+            //hideProgressDiv();
+            alert('Unable to send email.  Please check the following: \n' +
+                    '1. Microsoft Outlook is installed.\n' +
+                    '2. In IE the SharePoint Site is trusted.\n' +
+                    '3. In IE the setting for Initialize and Script ActiveX controls not marked as safe is Enabled in the Trusted zone.');
+        }
+    }
+  }
+		
+		</script>
 		</head>
 <body>
    <!-- Always shows a header, even in smaller screens. -->
@@ -87,7 +182,47 @@
 		</div>
 	</div>
 	</div>
-	
+		<!---- Contact website. ------>
+		<div class="mdl-grid" >
+		<!---- Contact website. ------>
+		<div class="mdl-cell mdl-cell--12-col mdl-cell--10-col-tablet mdl-cell--12-col-phone  padding-div color-theme"  align='center'>
+					<!---- sub Contact website. ------>
+				<div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+					<img src="images/index/rasp-pi.png" width="100%">
+				
+				</div>
+				<div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+					<div align="left">
+						<h2 class="font-thai">พัฒนาซอฟต์แวร์ /แอพพลิเคชั่น บนอุปกรณ์ฝังตัว และ  Mobile application</h2>
+						<h4 class="font-thai"> แอพพลิเคชั่นที่ทำงานบนอุปกรณ์ที่สามารถใช้ระบบปฎิบัติการได้ (Linux) และแอพพลิเคชั่นที่ทำงานได้บนคอมพิวเตอร์  PC หรือบนสมาร์ทโฟนในรูปแบบของ Mobile Application 
+						ทำให้ผู้ใช้งานสามารถเลือกทำงานได้ในแพลตฟอร์มที่ต้องการ 
+						</h4>
+						<h4 class="font-thai"> *สามารถพัฒนาแอพพลิเคชั่นที่ใช้งานเฉพาะด้าน ที่ควบคุมอุปกรณ์ปลายทางผ่านเครื่อข่ายอินเทอร์เน็ต หรือใช้สำหรับเก็บข้อมูล วิเคราะห์ตรวจสอบ หรือการประมวลด้วยภาพพร้อมทั้งสามารถมีระบบแจ้งเตือนได้
+						</h4><hr>
+				</div>
+					<div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+					<img src="images/icon/myicon/mobile.png" width="100%">
+				
+				</div>
+				<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+					<img src="images/icon/myicon/pc.png" width="100%">
+				
+				</div>
+				<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+					<img src="images/icon/myicon/embed.png" width="100%">
+				
+				</div>
+				
+				</div>
+			
+				</div>
+		
+		</div>
+	</div>
+	</div>
+	<!----end------>
 	<!---- Contact website. ------>
 		<div class="mdl-grid" >
 		<!---- Contact website. ------>
@@ -138,47 +273,7 @@
 	</div>
 	</div>
 	<!----end------>
-	<!---- Contact website. ------>
-		<div class="mdl-grid" >
-		<!---- Contact website. ------>
-		<div class="mdl-cell mdl-cell--12-col mdl-cell--10-col-tablet mdl-cell--12-col-phone  padding-div color-theme"  align='center'>
-					<!---- sub Contact website. ------>
-				<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
-					<img src="images/index/rasp-pi.png" width="100%">
-				
-				</div>
-				<div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
-					<div align="left">
-						<h2 class="font-thai">พัฒนาซอฟต์แวร์ /แอพพลิเคชั่น บนอุปกรณ์ฝังตัว และ  Mobile application</h2>
-						<h4 class="font-thai"> แอพพลิเคชั่นที่ทำงานบนอุปกรณ์ที่สามารถใช้ระบบปฎิบัติการได้ (Linux) และแอพพลิเคชั่นที่ทำงานได้บนคอมพิวเตอร์  PC หรือบนสมาร์ทโฟนในรูปแบบของ Mobile Application 
-						ทำให้ผู้ใช้งานสามารถเลือกทำงานได้ในแพลตฟอร์มที่ต้องการ 
-						</h4>
-						<h4 class="font-thai"> *สามารถพัฒนาแอพพลิเคชั่นที่ใช้งานเฉพาะด้าน ที่ควบคุมอุปกรณ์ปลายทางผ่านเครื่อข่ายอินเทอร์เน็ต หรือใช้สำหรับเก็บข้อมูล วิเคราะห์ตรวจสอบ หรือการประมวลด้วยภาพพร้อมทั้งสามารถมีระบบแจ้งเตือนได้
-						</h4><hr>
-				</div>
-					<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-					<img src="images/icon/myicon/mobile.png" width="100%">
-				
-				</div>
-				<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-					<img src="images/icon/myicon/pc.png" width="100%">
-				
-				</div>
-				<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-					<img src="images/icon/myicon/embed.png" width="100%">
-				
-				</div>
-				
-				</div>
-			
-				</div>
-		
-		</div>
-	</div>
-	</div>
-	<!----end------>
+
 	
 	
 	
@@ -265,7 +360,7 @@
 					<!---- sub About website. ------>
 				<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-tablet mdl-cell--10-col-phone">
-				<img src="images/about/me.jpg" width="100%">
+				<a href="http://www.bitstrips.com/user/HWT6NS/?sc=0"><img src="images/about/me.png" width="25%"></a>
 				<h3 class ="font-thai">"Mr. Sahakorn Buangam" </h3>
 					<h3 class ="font-thai">สหกรณ์ บัวงาม</h3>
 					<h4 class="font-thai">ตำแหน่ง วิศวกรคอมพิวเตอร์ </h4>
