@@ -2,6 +2,10 @@
     font-family:myFont;
     src:url('../font/THSarabun.ttf') format("truetype");
 }
+		html {
+-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+filter: grayscale(100%);
+}
 body{
 	background-color:#EEEEEE;
 	color:#FFFFFF;
